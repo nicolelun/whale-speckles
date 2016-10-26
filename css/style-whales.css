@@ -1,0 +1,375 @@
+/*GENERAL*/
+
+#main-section {
+	width: 100%;
+	height: 100vh;
+}
+
+/* SKY */
+
+#sky {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60vh;
+	background: radial-gradient(circle at 50% 40%, violet, white);
+	z-index: -100;
+}
+
+/* FEATHERS */
+
+[id^="feather-1-"] {
+	position: absolute;	
+	bottom: 70%;
+	z-index: 550; /* 550 behind wave 1 */
+}
+
+[id^="feather-2-"] {
+	position: absolute;
+	bottom: 60%;
+	z-index: 650; /* 650 behind wave 2 */
+}
+
+[id^="feather-3-"] {
+	position: absolute;
+	bottom: 20%;	
+	z-index: 750; /* 750 behind wave 3 */
+}
+
+[id^="feather-4-"] {
+	position: absolute;
+	bottom: 0%;	
+	z-index: 850; /* 850 behind wave 4 */
+}
+
+[id^="feather-5-"] {
+	position: absolute;
+	bottom: -50%;	
+	z-index: 950; /* 950 behind wave 5 */
+}
+
+[id^="feather-1-"] img {
+	width: 10px;
+}
+
+[id^="feather-2-"] img {
+	width: 30px;
+}
+
+[id^="feather-3-"] img {
+	width: 50px;
+}
+
+[id^="feather-4-"] img {
+	width: 80px;
+}
+
+[id^="feather-5-"] img {
+	width: 100px;
+}
+
+#feather-1-1 {
+	left: 60%;
+	animation:
+		feather-fly-1-1 20s 0s ease-in-out forwards,
+		feather-spin-1 2s linear infinite;
+}
+
+#feather-1-2 {
+	left: 55%;
+	animation:
+		feather-fly-1-2 20s 1s ease-in-out forwards,
+		feather-spin-1 2s linear infinite;
+}
+
+#feather-2-1 {
+	left: 70%;
+	animation:
+		feather-fly-2-1 20s 3s ease-in-out forwards,
+		feather-spin-1 2s linear infinite;
+}
+
+#feather-3-1 {
+	left: 80%;
+	animation:
+		feather-fly-3-1 20s 6.5s ease-in-out forwards,
+		feather-spin-1 1.5s linear infinite;
+}
+
+#feather-3-2 {
+	left: 30%;
+	animation:
+		feather-fly-3-1 20s 11s ease-in-out forwards,
+		feather-spin-1 1.5s .5s linear infinite;
+}
+
+#feather-2-2 {
+	left: 10%;
+	animation:
+		feather-fly-2-2 20s 12s ease-in-out forwards,
+		feather-spin-1 2s .25s linear infinite;
+}
+
+#feather-1-3 {
+	left: 17%;
+	animation:
+		feather-fly-1-1 20s 13.5s ease-in-out forwards,
+		feather-spin-1 2s linear infinite;
+}
+
+#feather-4-1 {
+	left: 55%;
+	/*animation:
+		feather-fly-4-1 20s 8.5s ease-in-out forwards,
+		feather-spin-1 2s .25s linear infinite;*/
+}
+
+#feather-4-2 {
+	left: 15%;
+	/*animation:
+		feather-fly-4-2 20s 17s ease-in-out infinite,
+		feather-spin-1 2s .5s linear infinite;*/
+}
+
+#feather-1-4 {
+	left: 15%;
+	/*animation:
+		feather-fly-1-1 20s 17s ease-in-out infinite,
+		feather-spin-1 2s linear infinite;*/
+}
+
+#feather-2-3 {
+	left: 75%;
+	animation:
+		feather-fly-2-2 20s 22s ease-in-out infinite,
+		feather-spin-1 2s linear infinite;
+}
+
+#feather-3-3 {
+	left: 72%;
+	/*animation:
+		feather-fly-3-1 20s 24s ease-in-out infinite,
+		feather-spin-1 2s linear infinite;*/
+}
+
+@keyframes feather-fly-1-1 {
+	0% { bottom: 70%; }
+	10% { bottom: 95%; }
+	20%, 100% { bottom: 70%; }
+}
+
+@keyframes feather-fly-1-2 {
+	0% { bottom: 70%; }
+	10% { bottom: 85%; }
+	20%, 100% { bottom: 70%; }
+}
+
+@keyframes feather-fly-2-1 {
+	0% { bottom: 60%; }
+	5% { bottom: 75%; }
+	10%, 100% { bottom: 60%; }
+}
+
+@keyframes feather-fly-2-2 {
+	0% { bottom: 60%; }
+	7% { bottom: 90%; }
+	14%, 100% { bottom: 60%; }
+}
+
+@keyframes feather-fly-3-1 {
+	0% { bottom: 20%; }
+	7% { bottom: 90%; }
+	14%, 100% { bottom: 20%; }
+}
+
+@keyframes feather-fly-3-2 {
+	0% { bottom: 20%; }
+	5% { bottom: 70%; }
+	10%, 100% { bottom: 20%; }
+}
+
+@keyframes feather-fly-4-1 {
+	0% { bottom: 10%; }
+	8% { bottom: 150%; }
+	16%, 100% { bottom: 10%; }
+}
+
+@keyframes feather-fly-4-2 {
+	0% { bottom: 10%; }
+	5% { bottom: 100%; }
+	10%, 100% { bottom: 10%; }
+}
+
+@keyframes feather-spin-1 {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }	
+}
+
+/* TEXT */
+
+#expression-1 {
+	/*border: 1px solid red;*/
+	position: absolute;
+	bottom: 35px;
+	width: 100%;
+	padding-left: 30px;
+	text-align: left;
+	font-family: 'Amatic SC', cursive;
+	font-weight: 700;
+	font-size: 35px;
+	color: white;
+	opacity: 0.5;
+	z-index: 750;
+	animation:
+		submerge-expression-1 11s forwards,
+		morph-3 2s ease-in-out 0.8s alternate 5 forwards,
+		morph-3-start 0.8s ease-out;
+}
+
+#expression-1:hover {
+	opacity: 0.9;
+}
+
+/*.word {
+	display: inline-block;
+	position: relative;
+	padding-left: 10px;
+	padding-right: 10px;
+}*/
+
+[id^="text-"] {
+	display: inline-block;
+	position: relative;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#text-1 {
+	animation: float-text-1 2s ease-in-out alternate infinite;
+}
+
+#text-2 {
+	animation: float-text-1 2.1s ease-in-out alternate infinite;
+}
+
+#text-3 {
+	animation: float-text-1 2.2s ease-in-out alternate infinite;
+}
+
+#text-4 {
+	animation: float-text-1 2s ease-in-out alternate infinite;
+}
+
+#text-5 {
+	animation: float-text-1 1.9s ease-in-out alternate infinite;
+}
+
+#text-6 {
+	animation: float-text-1 1.8s ease-in-out alternate infinite;
+}
+
+@keyframes float-text-1 {
+	0% { top: 20px; }
+	100% { top: 0; }
+}
+
+/* WAVES */
+
+.wave {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	/*opacity: 0.5;*/
+}
+
+#wave-1 {
+	background: violet;
+	animation:
+		morph-1 2s ease-in-out 1.6s alternate infinite,
+		morph-1-start 1.6s ease-out;
+	z-index: 600;
+}
+
+#wave-2 {
+	background: #BF00C0;
+	animation:
+		morph-2 2s ease-in-out 1.2s alternate infinite,
+		morph-2-start 1.2s ease-out;
+	z-index: 700;
+}
+
+#wave-3 {
+	background: #9E009E;
+	animation: 
+		morph-3 2s ease-in-out 0.8s alternate infinite,
+		morph-3-start 0.8s ease-out;
+	z-index: 800;	
+}
+
+#wave-4 {
+	background: purple;
+	animation: 
+		morph-4 2s ease-in-out 0.4s alternate infinite,
+		morph-4-start 0.4s ease-out;
+	z-index: 900;	
+}
+
+#wave-5 {
+	background: #5C005D;
+	animation: 
+		morph-5 2s ease-in-out alternate infinite;
+	z-index: 1000;
+}
+
+@keyframes morph-1-start {
+	0% { height: 88vh; } /* 4/5 */
+	100% { height: 90vh; }
+}
+
+@keyframes morph-1 {
+	0% { height: 90vh; }
+	100% { height: 80vh; }
+}
+
+@keyframes morph-2-start {
+	0% { height: 79vh; } /* 3/5 */
+	100% { height: 85vh; }
+}
+
+@keyframes morph-2 {
+	0% { height: 85vh; }
+	100% { height: 70vh; }
+}
+
+@keyframes morph-3-start {
+	0% { height: 63vh; } /* 2/5 */
+	100% { height: 75vh; }
+}
+
+@keyframes morph-3 {
+	0% { height: 75vh; }
+	100% { height: 55vh; }
+}
+
+@keyframes submerge-expression-1 {
+	0% { bottom: 35px; left: 0; }
+	80% { bottom: 35px; left: 100px; }
+	100% { bottom: 0; left: 120px; }
+}
+
+@keyframes morph-4-start {
+	0% { height: 39vh; } /* 1/5 */
+	100% { height: 60vh; }
+}
+
+@keyframes morph-4 {
+	0% { height: 60vh; }
+	100% { height: 35vh; }
+}
+
+@keyframes morph-5 {
+	0% { height: 40vh; }
+	100% { height: 0vh; }
+}

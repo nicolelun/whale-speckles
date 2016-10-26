@@ -1,0 +1,115 @@
+#main-section {
+	width: 100%;
+	height: 100vh;
+	background-color: black;
+}
+
+.next-page-link {
+	position: absolute;
+	/*border: 1px solid red;*/
+}
+
+.expression {
+	/*position: absolute;*/
+	width: 200px;
+	color: white;
+	z-index: 1000000;
+}
+
+.word {
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	font-size: 35px;
+	text-transform: uppercase;
+	color: white;
+	font-weight: 700;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.letter {
+	display: inline-block;
+	position: relative;
+	color: white;
+	opacity: 0;
+}
+
+@keyframes smash-expression-0 {
+	0% { opacity: 1; transform: translate(0px, 0px);}
+	100% { opacity: 0; transform: translate(400px, 400px);}
+}
+
+@keyframes smash-expression-1 {
+	0% { opacity: 1; transform: translate(0px, 0px);}
+	100% { opacity: 0; transform: translate(-300px, -500px);}
+}
+
+@keyframes smash-expression-2 {
+	0% { opacity: 1; transform: translate(0px, 0px);}
+	100% { opacity: 0; transform: translate(200px, 450px);}
+}
+
+@keyframes smash-expression-3 {
+	0% { opacity: 1; transform: translate(0px, 0px);}
+	100% { opacity: 0; transform: translate(-250px, -300px);}
+}
+
+@keyframes smash-expression-4 {
+	0% { opacity: 1; transform: translate(0px, 0px);}
+	100% { opacity: 0; transform: translate(100px, 300px);}
+}
+
+@keyframes smash-expression-5 {
+	0% { opacity: 1; transform: translate(0px, 0px);}
+	100% { opacity: 0; transform: translate(-150px, -350px);}
+}
+
+@keyframes smash-expression-6 {
+	0% { opacity: 1; transform: translate(0px, 0px);}
+	100% { opacity: 0; transform: translate(-50px, -200px);}
+}
+
+@keyframes smash-expression-7 {
+	0% { opacity: 1; transform: translate(0px, 0px);}
+	100% { opacity: 0; transform: translate(500px, -600px);}
+}
+
+@keyframes smash-expression-8 {
+	0% { opacity: 1; transform: translate(0px, 0px);}
+	100% { opacity: 0; transform: translate(150px, -600px);}
+}
+
+@keyframes smash-expression-9 {
+	0% { opacity: 1; transform: translate(0px, 0px);}
+	100% { opacity: 0; transform: translate(-500px, 600px);}
+}
+
+.burst {
+	position: absolute;
+	background: radial-gradient(circle, red, transparent);
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+}
+
+@keyframes burst-background-0 {
+	0% {  
+		transform: scale(0, 0);
+		opacity: 1;
+	}
+	10% { 	
+		transform: scale(500, 500);
+		opacity: .5;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fade-in {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}

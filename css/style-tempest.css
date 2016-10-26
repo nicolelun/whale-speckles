@@ -1,0 +1,237 @@
+#main-section {
+	width: 100%;
+	height: 100vh;
+}
+
+/* SKY */
+
+#sky {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	z-index: -100;
+	background: linear-gradient(#5C005D, white);
+}
+
+/* WAVE */
+
+.wave {
+	position: absolute;
+	width: 100%;
+	/*opacity: 0.5;*/
+}
+
+/*#wave-1 {
+	background: violet;
+	z-index: 600;
+	animation: drop-wave 1s 0s both;
+}
+
+#wave-2 {
+	background: #BF00C0;
+	z-index: 700;
+	animation: drop-wave 1s 0.25s ease-out both;
+}*/
+
+#wave-3 {
+	background: #9E009E;
+	z-index: 800;
+	animation: drop-wave .5s 0s ease-out both;	
+}
+
+#wave-4 {
+	background: purple;
+	z-index: 900;
+	animation: drop-wave .5s 0.25s ease-out both;	
+}
+
+#wave-5 {
+	background: #5C005D;
+	z-index: 1000;
+	animation: 
+		/*raise-flood 80s 3s,*/
+		drop-wave .5s 0.5s ease-out both,
+		fade-to-red 2s 1.5s both;
+}
+
+@keyframes drop-wave {
+	0% { 
+		top: 0vh;
+		height: 0vh; 
+	}
+	50% {
+		top: 0vh;
+		height: 75vh;
+	}
+	100% {
+		top: 70vh;
+		height: 30vh;
+	}
+}
+
+@keyframes fade-to-red {
+	0% {  }
+	100% { background-color: #900B25; }
+}
+
+/* FLOOD */
+
+#bubble-container {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 30vh;
+	z-index: 950;
+	animation: 
+		fade-to-red 6s 3s both,
+		raise-flood 80s 3s ease-out both;
+}
+
+@keyframes raise-flood {
+	0% {  }
+	100% { height: 60vh; }
+}
+
+/* TEXT */
+
+#expression-1 {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	/*border: 1px solid red;*/
+}
+
+.word {
+	display: inline-block;
+	position: relative;
+	top: -10vh;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	font-size: 35px;
+	text-transform: uppercase;
+	font-weight: 700;
+	z-index: 999999;
+	animation: 
+		/*bounce-word-2 0.5s 5.5s 4 alternate forwards,*/
+		bounce-word-1 2s 1s 2 alternate forwards, 
+		drop-word 0.5s ease-in, 
+		fade 8s ease-in both;
+}
+
+@keyframes fade {
+	0% { color: #5C005D; }
+	/*0% { color: white; }*/
+	/*0% { color: violet; }*/
+	/*70% { color: #6E081C; }*/
+	10% { color: white; }
+	100% { color: transparent; }
+}
+
+@keyframes drop-word {
+	0% { top: -10vh; }
+	100% { top: 90vh; }
+}
+
+@keyframes bounce-word-1 {
+	0% { top: 90vh }
+	100% { top: 70vh; }
+}
+
+/*@keyframes bounce-word-2 {
+	0% { top: 90vh; }
+	100% { top: 80vh; }
+}*/
+
+.letter-background {
+	display: inline-block;
+	position: absolute;
+	color: #C40F33;
+	font-weight: 700;
+	animation: float-letter 120s ease-out both;
+}
+
+@keyframes float-letter {
+	0% {  }
+	100% { transform: translate(0, -100vh); }
+}
+
+.letter-bubble {
+	display: inline-block;
+	position: relative;
+	font-weight: 700;
+	/*opacity: 0;*/
+}
+
+@keyframes gurgle-letter-1 {
+	0% { top: 30%; color: #C40F33; opacity: 1; }
+	100% { top: -125%; color: purple; }
+}
+
+@keyframes gurgle-letter-2 {
+	0% { top: 30%; color: #C40F33; opacity: 1; }
+	100% { top: -133%; color: purple; } 
+}
+
+@keyframes gurgle-letter-3 {
+	0% { top: 30%; color: #C40F33; opacity: 1; }
+	100% { top: -100%; color: purple; }
+}
+
+@keyframes gurgle-letter-4 {
+	0% { top: 30%; color: #C40F33; opacity: 1; }
+	100% { top: -115%; color: purple; }
+}
+
+/*[id^="div-"] {
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 0%;
+	z-index: 100;	
+}
+
+#div-1 {
+	background: red;
+	animation: morph-1 1s 5s linear infinite;
+}
+
+#div-2 {
+	background: darkred;
+	animation: morph-2 1s 5.25s linear infinite;
+}
+
+#div-3 {
+	background: red;
+	animation: morph-1 1s 5.5s linear infinite;
+}
+
+#div-4 {
+	background: darkred;
+	animation: morph-2 1s 5.75s linear infinite;
+}
+
+#div-5 {
+	background: red;
+	animation: morph-1 1s 6s linear infinite;
+}
+
+#div-6 {
+	background: darkred;
+	animation: morph-2 1s 6.25s linear infinite;
+}
+
+@keyframes morph-1 {
+	0% { width: 0%; left: 0;}
+	25% { width: 50%; }
+	100% { width: 0%; left: 100%;}
+}
+
+@keyframes morph-2 {
+	0% { width: 0%; right: 0;}
+	25% { width: 50%; }
+	100% { width: 0%; right: 100%;}
+}*/
+
+

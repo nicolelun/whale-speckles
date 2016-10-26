@@ -1,0 +1,36 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Amatic SC', cursive;
+	/*font-family: 'Noto Serif', serif;*/
+}
+
+header {
+	text-align: center;
+	color: white;
+}
+
+#about-button {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 10px;
+	z-index: 100000;
+	padding: 10px 20px;
+	opacity: 0.2;
+}
+
+#about-button a {
+	font-family: 'Amatic SC', cursive;
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+}
+
+#about-button:hover {
+	opacity: 1.0;
+}
